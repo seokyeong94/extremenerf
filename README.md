@@ -1,14 +1,14 @@
 # Nerfies
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the ExtremeNeRF.
 
-If you find Nerfies useful for your work please cite:
+If you find ExtremeNeRF useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{extremenerf,
+  author    = {Lee, SeokYeong and Choi, JunYong and Kim, Seungryong and Kim, Ig-Jae and Cho, Junghyun}
+  title     = {ExtremeNeRF: Few-shot Neural Radiance Fields Under Unconstrained Illumination},
+  journal   = {arXiv},
+  year      = {2023},
 }
 ```
 
