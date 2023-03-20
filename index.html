@@ -254,7 +254,7 @@
             synthesis framework that utilizes an offline intrinsic decomposition
             network, providing global context-aware pseudoalbedo
             ground truth without the computational overhead.
-            As illustrated in Fig. 3, FIDNet [33] provides pseudoalbedo
+            As illustrated in the figure, FIDNet provides pseudoalbedo
             ground truths for the input images before the start of
             the training. Then PIDNet learns to extract intrinsic components
             of the synthesized patch, given the pseudo-albedo
@@ -320,6 +320,19 @@
             images with a variety of light sources such as multiple light
             bulbs and the sun.
           </p>
+          
+          <p>
+            Our dataset consists of 10 scenes, 6 of which are indoor
+            and 4 are outdoor. We took 40 images per scene with a resolution
+            of 3, 000 × 4, 000, with 30 images in the train set
+            and 10 images in the test set. The training images of each
+            scene are captured with at least 3 different lighting conditions.
+            To make the dataset more widely useful, we captured
+            the test scenes under mild lighting conditions, rather than
+            extremely low or high contrasts or intensities, similar to images
+            in typical NeRF benchmark datasets
+          </p>
+          
         </div>
         <div class="columns is-centered">
           <img style='height: auto; width: 100%; object-fit: contain' src="static/images/dataset.PNG" alt="overview_image">
