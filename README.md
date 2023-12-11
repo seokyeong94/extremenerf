@@ -6,7 +6,7 @@ If you find ExtremeNeRF useful for your work please cite:
 ```
 @article{extremenerf,
   author    = {Lee, SeokYeong and Choi, JunYong and Kim, Seungryong and Kim, Ig-Jae and Cho, Junghyun}
-  title     = {ExtremeNeRF: Few-shot Neural Radiance Fields Under Unconstrained Illumination},
+  title     = {Few-shot Neural Radiance Fields Under Unconstrained Illumination},
   journal   = {arXiv},
   year      = {2023},
 }
