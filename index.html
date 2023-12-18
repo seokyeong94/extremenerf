@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ExtremeNeRF: Few-shot Neural Radiance Fields Under Unconstrained Illumination</h1>
+          <h1 class="title is-1 publication-title">Few-shot Neural Radiance Fields Under Unconstrained Illumination \\ AAAI'24</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.linkedin.com/in/seokyeong-lee-852a96191">SeokYeong Lee</a><sup>1,2</sup>,</span>
@@ -93,35 +93,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
+
             </div>
 
           </div>
@@ -155,24 +127,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we propose a new challenge that synthesizes
-            a novel view in a more practical environment, where
-            the number of input multi-view images is limited and illumination
-            variations are significant. Despite recent success,
-            neural radiance fields (NeRF) require a massive amount of
-            input multi-view images taken under constrained illuminations.
-            To address the problem, we suggest ExtremeNeRF,
-            which utilizes occlusion-aware multi-view albedo consistency,
-            supported by geometric alignment and depth consistency.
-            We extract intrinsic image components that should be
-            illumination-invariant across different views, enabling direct
-            appearance comparison between the input and novel
-            view under unconstrained illumination. We provide extensive
-            experimental results for an evaluation of the task, using
-            the newly built NeRF Extreme benchmark, which is the
-            first in-the-wild novel view synthesis benchmark taken under
-            multiple viewing directions and varying illuminations.
-            The code and dataset will be made publicly available.
+            In this paper, we introduce a new challenge for synthesizing novel view images in practical environments
+ with limited input multi-view images and varying lighting conditions. Neural radiance fields (NeRF), one of the 
+pioneering works for this task, demand an extensive set of multi-view images taken under constrained illumination, 
+which is often unattainable in real-world settings. While some previous works have managed to synthesize novel views 
+given images with different illumination, their performance still relies on a substantial number of input multi-view images. 
+To address this problem, we suggest ExtremeNeRF, which utilizes multi-view albedo consistency, supported by geometric alignment. 
+Specifically, we extract intrinsic image components that should be illumination-invariant across different views, 
+enabling direct appearance comparison between the input and novel view under unconstrained illumination. We offer thorough 
+experimental results for task evaluation, employing the newly created NeRF Extreme benchmark—the first in-the-wild 
+benchmark for novel view synthesis under multiple viewing directions and varying illuminations.
           </p>
         </div>
       </div>
