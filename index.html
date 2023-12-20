@@ -111,7 +111,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ExtremeNeRF</span> synthesizes images given only a few-shot taken under unconstrained illumination.
+        <span class="dnerf">ExtremeNeRF</span> synthesizes images given only a few shots taken under unconstrained illumination.
       </h2>
     </div>
   </div>
@@ -195,36 +195,24 @@ benchmark for novel view synthesis under multiple viewing directions and varying
           <!-- <br><br/> -->
           <p></p> 
           <p>
-            The objective of this work is to build an illumination-robust
-            few-shot view synthesis framework by regularizing
-            intrinsic components that should be identical across multiview
-            images regardless of illumination. However, there exist
-            three major challenges in comparing the albedo extracted
-            from the novel synthesized view and those of input images:
-            1) Since our proposed method requires pixel-to-pixel correspondence
-            between different views, a geometric alignment
-            is needed to select the pixel to compare. 2) There always exists
-            a non-intersecting or occluded region between the novel
-            view and the input view images, which should be considered
-            during cross-view regularization. 3) The key feature
-            for successful intrinsic decomposition is the global context
-            of a scene. However, the NeRF-based structure has difficulties
-            in rendering full-resolution images since continuous
-            ray sampling upon the entire image requires massive computational
-            and memory costs.
+           The objective of this work is to build an illumination-robust 
+few-shot view synthesis framework by regularizing albedo that should be 
+identical across multi-view images regardless of illumination. 
+Our major challenges are to 1) achieve reliable geometry alignment between 
+different views and 2) decompose the albedo of a rendered view without 
+extensive computational costs.
          </p>
          <p>
-            To address these problems, we suggest a few-shot view
-            synthesis framework that utilizes an offline intrinsic decomposition
-            network, providing global context-aware pseudoalbedo
-            ground truth without the computational overhead.
-            As illustrated in the figure, FIDNet provides pseudoalbedo
-            ground truths for the input images before the start of
-            the training. Then PIDNet learns to extract intrinsic components
-            of the synthesized patch, given the pseudo-albedo
-            ground truth of the corresponding patch depicting the same
-            3D surface. As a result, our NeRF learns illuminationrobust
-            few-shot view synthesis.
+            Instead of directly addressing NeRF-based intrinsic decomposition, 
+we integrate a pre-existing intrinsic decomposition network with NeRF optimization. 
+Our approach involves a few-shot view synthesis framework that employs an offline 
+intrinsic decomposition network, offering global context-aware pseudo-albedo ground 
+truth without the computational overhead. As illustrated in the figure below, 
+FIDNet provides pseudo-albedo ground truths for the input images before the start of the 
+training, guiding PIDNet to extract intrinsic components for novel synthesized views based 
+on these pseudo truths and multi-view correspondences. This allows our NeRF to learn 
+illumination-robust few-shot view synthesis through cross-view albedo consistency. 
+Subsequent subsections detail each framework component.
           </p>
         </div>
         <div class="columns is-centered">
@@ -254,13 +242,13 @@ benchmark for novel view synthesis under multiple viewing directions and varying
         </div>
 
         <br><br/> 
-        <h3 class="title is-5">Light-varying DTU</h3>
+        <h3 class="title is-5">Phototourism F^3</h3>
         <div class="content has-text-justified">
           <p></p> 
           <p>
            Given light-varying 3 view input images, our proposed
-           method shows reliable synthesis qualities both for the color and the depth maps, while RegNeRF shows floating artifacts
-           and ill-synthesized depths.
+           method shows reliable synthesis qualities both for the color and the depth maps, 
+          while other baselines show floating artifacts and ill-synthesized depths.
           </p>
         </div>
         <div class="columns is-centered">
@@ -290,7 +278,7 @@ benchmark for novel view synthesis under multiple viewing directions and varying
             and 4 are outdoor. We took 40 images per scene with a resolution
             of 3, 000 × 4, 000, with 30 images in the train set
             and 10 images in the test set. The training images of each
-            scene are captured with at least 3 different lighting conditions.
+            scenes are captured with at least 3 different lighting conditions.
             To make the dataset more widely useful, we captured
             the test scenes under mild lighting conditions, rather than
             extremely low or high contrasts or intensities, similar to images
